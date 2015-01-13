@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="370.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BilgileriDuzenleController">
+   <children>
+      <Label layoutX="97.0" layoutY="276.0" text="Adet :" />
+      <TextField fx:id="tfUrunAdedi" layoutX="248.0" layoutY="270.0" prefHeight="25.0" prefWidth="88.0" />
+      <TextField fx:id="tfUrunFiyati" layoutX="247.0" layoutY="181.0" prefHeight="25.0" prefWidth="88.0" />
+      <Label layoutX="97.0" layoutY="187.0" text="Fiyat :" />
+      <Label layoutX="95.0" layoutY="136.0" text="Ürün Kategorisi :" />
+      <ComboBox fx:id="cbUrunKategorisi" layoutX="246.0" layoutY="127.0" prefHeight="25.0" prefWidth="207.0" />
+      <TextField fx:id="tfUrunAdi" layoutX="244.0" layoutY="32.0" prefHeight="25.0" prefWidth="207.0" />
+      <Label layoutX="95.0" layoutY="36.0" text="Ürün Adı :" />
+      <Label layoutX="97.0" layoutY="232.0" text="Kira Fiyatı :" />
+      <TextField fx:id="tfKiraFiyati" layoutX="248.0" layoutY="227.0" prefHeight="25.0" prefWidth="88.0" />
+      <Label layoutX="96.0" layoutY="81.0" text="Platform :" />
+      <ComboBox fx:id="cbUrunPlatform" layoutX="245.0" layoutY="77.0" prefHeight="25.0" prefWidth="207.0" />
+      <Button layoutX="427.0" layoutY="314.0" mnemonicParsing="false" onAction="#urunBilgiGuncelle" prefHeight="25.0" prefWidth="88.0" text="Kaydet" />
+   </children>
+</AnchorPane>

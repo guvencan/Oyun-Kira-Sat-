@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 24, 2014 1:02:19 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.POJO.Urun" table="urun" catalog="yazilimproje" optimistic-lock="version">
+        <id name="urunId" type="java.lang.Integer">
+            <column name="UrunId" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="kategori" class="model.POJO.Kategori" fetch="select">
+            <column name="KategoriId" not-null="true" />
+        </many-to-one>
+        <many-to-one name="platform" class="model.POJO.Platform" fetch="select">
+            <column name="PlatformId" not-null="true" />
+        </many-to-one>
+        <property name="urunAdi" type="string">
+            <column name="UrunAdi" length="45" not-null="true" />
+        </property>
+        <property name="urunKiraFiyat" type="int">
+            <column name="UrunKiraFiyat" not-null="true" />
+        </property>
+        <property name="urunSatisFiyat" type="int">
+            <column name="UrunSatisFiyat" not-null="true" />
+        </property>
+        <property name="urunResim" type="binary">
+            <column name="UrunResim" not-null="true" />
+        </property>
+        <property name="urunAdet" type="int">
+            <column name="UrunAdet" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StokTakipController">
+   <children>
+      <Pane prefHeight="102.0" prefWidth="1024.0" style="-fx-background-color: #292323;">
+         <children>
+            <Label layoutX="27.0" layoutY="30.0" text="CODEMAN" textFill="#eee7e7">
+               <font>
+                  <Font name="Ubuntu Light" size="29.0" />
+               </font>
+            </Label>
+            <Label layoutX="183.0" layoutY="39.0" text="|    Oyun Kiralama ve Satış Sistemi" textFill="#d3cccc" />
+            <TextField fx:id="tfGenelArama" layoutX="825.0" layoutY="60.0" promptText="DETAYLI ARAMA..." />
+            <Label layoutX="858.0" layoutY="-3.0" prefHeight="34.0" prefWidth="109.0" text="Admin, Hoş geldiniz." textFill="WHITE" />
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="828.0" layoutY="4.0">
+               <image>
+                  <Image url="@/pictures/Actions-im-user-offline-icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="975.0" layoutY="56.0">
+               <image>
+                  <Image url="@/pictures/Search-Search-icon.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnAdmin" layoutX="823.0" layoutY="4.0" mnemonicParsing="false" onAction="#menuAdminGuncelle" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: transparent;" />
+         </children>
+      </Pane>
+      <Pane layoutY="102.0" prefHeight="506.0" prefWidth="207.0" style="-fx-background-color: #E1DCDC;">
+         <children>
+            <Label alignment="CENTER" layoutY="3.0" prefHeight="25.0" prefWidth="207.0" style="-fx-background-color: #B2C538;" text="MENÜ" textAlignment="CENTER" textFill="#000000cb">
+               <font>
+                  <Font name="Lucida Sans Demibold" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnMusteriler" layoutY="90.0" maxHeight="50.0" maxWidth="207.0" mnemonicParsing="false" onAction="#menuMusteriler" prefHeight="50.0" prefWidth="207.0" style="-fx-background-color: #F7F3F3;" text="MÜŞTERİLER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnAnasayfa" layoutY="30.0" maxHeight="50.0" maxWidth="207.0" mnemonicParsing="false" onAction="#menuAnasayfa" prefHeight="50.0" prefWidth="207.0" style="-fx-background-color: #F7F3F3;" text="ANASAYFA">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnKategori" layoutY="150.0" maxHeight="50.0" maxWidth="207.0" mnemonicParsing="false" onAction="#menuKategori" prefHeight="50.0" prefWidth="207.0" style="-fx-background-color: #F7F3F3;" text="KATEGORİ">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnUrun" layoutY="210.0" maxHeight="50.0" maxWidth="207.0" mnemonicParsing="false" onAction="#menuUrun" prefHeight="50.0" prefWidth="207.0" style="-fx-background-color: #F7F3F3;" text="ÜRÜN">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSatisGecmisi" layoutY="270.0" maxHeight="50.0" maxWidth="207.0" mnemonicParsing="false" onAction="#menuSatisGecmisi" prefHeight="50.0" prefWidth="207.0" style="-fx-background-color: #F7F3F3;" text="SATIŞ GEÇMİŞİ">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnStokTakip" layoutY="330.0" maxHeight="50.0" maxWidth="207.0" mnemonicParsing="false" onAction="#menuStokTakip" prefHeight="50.0" prefWidth="207.0" style="-fx-background-color: #F7F3F3;" text="STOK TAKİP">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnDestek" layoutY="390.0" maxHeight="50.0" maxWidth="207.0" mnemonicParsing="false" onAction="#menuDestek" prefHeight="50.0" prefWidth="207.0" style="-fx-background-color: #F7F3F3;" text="DESTEK">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSepet" layoutY="450.0" maxHeight="50.0" maxWidth="207.0" mnemonicParsing="false" onAction="#menuSepet" prefHeight="50.0" prefWidth="207.0" style="-fx-background-color: #F7F3F3;" text="SEPET">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="5.0" layoutY="38.0">
+               <image>
+                  <Image url="@/pictures/13_Places_maps_pins_64px_01.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="5.0" layoutY="98.0">
+               <image>
+                  <Image url="@/pictures/20_User_64px_07.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="5.0" layoutY="158.0">
+               <image>
+                  <Image url="@/pictures/2_Business_commerce_64px_147.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="5.0" layoutY="218.0">
+               <image>
+                  <Image url="@/pictures/2_Business_commerce_64px_159.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="5.0" layoutY="283.0">
+               <image>
+                  <Image url="@/pictures/2_Business_commerce_64px_150.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="5.0" layoutY="338.0">
+               <image>
+                  <Image url="@/pictures/2_Business_commerce_64px_39.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="5.0" layoutY="458.0">
+               <image>
+                  <Image url="@/pictures/2_Business_commerce_64px_09.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="5.0" layoutY="398.0">
+               <image>
+                  <Image url="@/pictures/20_User_64px_109.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="150.0" layoutY="466.0" text="0 " textFill="#fc0707">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Text layoutX="144.0" layoutY="478.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(    )" />
+         </children>
+      </Pane>
+      <Pane layoutX="210.0" layoutY="105.0" prefHeight="500.0" prefWidth="810.0" style="-fx-border-style: solid; -fx-border-color: #ccc; -fx-background-color: #E1DCDC;">
+         <children>
+            <TabPane layoutX="-1.0" prefHeight="500.0" prefWidth="810.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="StokPie" text="Stok       ">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="467.0" prefWidth="805.0">
+                           <children>
+                              <PieChart fx:id="pie" labelLineLength="1.0" labelsVisible="false" layoutX="122.0" layoutY="-1.0" maxHeight="473.0" maxWidth="610.0" minHeight="473.0" minWidth="610.0" onDragDetected="#PieAction" prefHeight="473.0" prefWidth="610.0" />
+                              <Label fx:id="caption" layoutX="14.0" layoutY="36.0" prefHeight="56.0" prefWidth="134.0" text="Stok" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="StokTabloTAB" text="Stok Tablo   ">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="StokTable" layoutX="170.0" layoutY="91.0" prefHeight="471.0" prefWidth="810.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="clmurunAd" prefWidth="397.0" text="Urun" />
+                                  <TableColumn fx:id="clmUrunAdet" minWidth="0.0" prefWidth="412.0" text="Adet" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab fx:id="cokSatanTabPie" onSelectionChanged="#cokSatanTabPie" text="Çok Satanlar">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <PieChart fx:id="PieCokSatan" layoutX="155.0" layoutY="36.0" />
+                              <Label fx:id="caption1" layoutX="14.0" layoutY="36.0" prefHeight="56.0" prefWidth="134.0" text="Satış" />
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="CokSatanTAB" onSelectionChanged="#CokSatanTAB" text="Çok Satanlar Tablo">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="cokSatanTable" prefHeight="471.0" prefWidth="810.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="clmSatanUrun" prefWidth="293.0" text="Urun" />
+                                  <TableColumn fx:id="clmSatanAdet" minWidth="0.0" prefWidth="240.0" text="Satış Adeti" />
+                                    <TableColumn fx:id="clmSatanFiyat" minWidth="0.0" prefWidth="276.0" text="Fiyat" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children></Pane>
+   </children>
+</AnchorPane>

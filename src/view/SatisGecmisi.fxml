@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SatisGecmisiController">
+   <children>
+      <Pane prefHeight="102.0" prefWidth="1024.0" style="-fx-background-color: #292323;">
+         <children>
+            <Label layoutX="27.0" layoutY="30.0" text="CODEMAN" textFill="#eee7e7">
+               <font>
+                  <Font name="Ubuntu Light" size="29.0" />
+               </font>
+            </Label>
+            <Label layoutX="183.0" layoutY="39.0" text="|    Oyun Kiralama ve Satış Sistemi" textFill="#d3cccc" />
+            <TextField fx:id="tfGenelArama" layoutX="825.0" layoutY="60.0" promptText="DETAYLI ARAMA..." />
+            <Label layoutX="858.0" layoutY="-3.0" prefHeight="34.0" prefWidth="109.0" text="Admin, Hoş geldiniz." textFill="WHITE" />
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="828.0" layoutY="4.0">
+               <image>
+                  <Image url="@/pictures/Actions-im-user-offline-icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="975.0" layoutY="56.0">
+               <image>
+                  <Image url="@/pictures/Search-Search-icon.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnAdmin" layoutX="823.0" layoutY="4.0" mnemonicParsing="false" onAction="#menuAdminGuncelle" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: transparent;" />
+         </children>
+      </Pane>
+      <Pane layoutY="102.0" prefHeight="506.0" prefWidth="207.0" style="-fx-background-color: #E1DCDC;">
+         <children>
+            <Label alignment="CENTER" layoutY="3.0" prefHeight="25.0" prefWidth="207.0" style="-fx-background-color: #B2C538;" text="MENÜ" textAlignment="CENTER" textFill="#000000cb">
+               <font>
+                  <Font name="Lucida Sans Demibold" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnMusteriler" layoutY="90.0" maxHeight="50.0" maxWidth="207.0" mnemonicParsing="false" onAction="#menuMusteriler" prefHeight="50.0" prefWidth="207.0" style="-fx-background-color: #F7F3F3;" text="MÜŞTERİLER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnAnasayfa" layoutY="30.0" maxHeight="50.0" maxWidth="207.0" mnemonicParsing="false" onAction="#menuAnasayfa" prefHeight="50.0" prefWidth="207.0" style="-fx-background-color: #F7F3F3;" text="ANASAYFA">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnKategori" layoutY="150.0" maxHeight="50.0" maxWidth="207.0" mnemonicParsing="false" onAction="#menuKategori" prefHeight="50.0" prefWidth="207.0" style="-fx-background-color: #F7F3F3;" text="KATEGORİ">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnUrun" layoutY="210.0" maxHeight="50.0" maxWidth="207.0" mnemonicParsing="false" onAction="#menuUrun" prefHeight="50.0" prefWidth="207.0" style="-fx-background-color: #F7F3F3;" text="ÜRÜN">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSatisGecmisi" layoutY="270.0" maxHeight="50.0" maxWidth="207.0" mnemonicParsing="false" onAction="#menuSatisGecmisi" prefHeight="50.0" prefWidth="207.0" style="-fx-background-color: #F7F3F3;" text="SATIŞ GEÇMİŞİ">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnStokTakip" layoutY="330.0" maxHeight="50.0" maxWidth="207.0" mnemonicParsing="false" onAction="#menuStokTakip" prefHeight="50.0" prefWidth="207.0" style="-fx-background-color: #F7F3F3;" text="STOK TAKİP">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnDestek" layoutY="390.0" maxHeight="50.0" maxWidth="207.0" mnemonicParsing="false" onAction="#menuDestek" prefHeight="50.0" prefWidth="207.0" style="-fx-background-color: #F7F3F3;" text="DESTEK">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSepet" layoutY="450.0" maxHeight="50.0" maxWidth="207.0" mnemonicParsing="false" onAction="#menuSepet" prefHeight="50.0" prefWidth="207.0" style="-fx-background-color: #F7F3F3;" text="SEPET">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="5.0" layoutY="38.0">
+               <image>
+                  <Image url="@/pictures/13_Places_maps_pins_64px_01.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="5.0" layoutY="98.0">
+               <image>
+                  <Image url="@/pictures/20_User_64px_07.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="5.0" layoutY="158.0">
+               <image>
+                  <Image url="@/pictures/2_Business_commerce_64px_147.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="5.0" layoutY="218.0">
+               <image>
+                  <Image url="@/pictures/2_Business_commerce_64px_159.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="5.0" layoutY="283.0">
+               <image>
+                  <Image url="@/pictures/2_Business_commerce_64px_150.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="5.0" layoutY="338.0">
+               <image>
+                  <Image url="@/pictures/2_Business_commerce_64px_39.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="5.0" layoutY="458.0">
+               <image>
+                  <Image url="@/pictures/2_Business_commerce_64px_09.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="5.0" layoutY="398.0">
+               <image>
+                  <Image url="@/pictures/20_User_64px_109.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="150.0" layoutY="466.0" text="0 " textFill="#fc0707">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Text layoutX="144.0" layoutY="478.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(    )" />
+         </children>
+      </Pane>
+      <Pane layoutX="210.0" layoutY="105.0" prefHeight="500.0" prefWidth="810.0" style="-fx-border-style: solid; -fx-border-color: #ccc; -fx-background-color: #E1DCDC;">
+         <children>
+            <TabPane prefHeight="500.0" prefWidth="810.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Satiş          ">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="TableSatisGecmisi" layoutY="52.0" prefHeight="420.0" prefWidth="810.0">
+                                <columns>
+                                  <TableColumn fx:id="clmMusteriId" prefWidth="141.0" text="Musteri ID" />
+                                    <TableColumn fx:id="clmMusteriAd" minWidth="6.0" prefWidth="134.0" text="Musteri Adı" />
+                                    <TableColumn fx:id="clmDurum" prefWidth="112.0" text="Durum" />
+                                    <TableColumn fx:id="clmTarih" prefWidth="159.0" text="Tarih" />
+                                    <TableColumn fx:id="clmFiyat" minWidth="7.0" prefWidth="110.0" text="Fiyat" />
+                                    <TableColumn fx:id="clmUrun" prefWidth="153.0" text="Urun " />
+                                </columns>
+                              </TableView>
+                              <TextField fx:id="SatisAraText" layoutX="205.0" layoutY="14.0" />
+                              <Button fx:id="SatisAraButton" layoutX="405.0" layoutY="14.0" mnemonicParsing="false" onAction="#SatisArama" prefHeight="25.0" prefWidth="85.0" text="Ara" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="KiraPane" onSelectionChanged="#KiraPane" text="Kira            ">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="KiraTable" layoutX="-1.0" layoutY="50.0" prefHeight="420.0" prefWidth="810.0">
+                                <columns>
+                                    <TableColumn fx:id="clmKiraMusteriId" prefWidth="113.0" text="Musteri ID" />
+                                  <TableColumn fx:id="clmKiraMusteri" prefWidth="119.0" text="Musteri" />
+                                  <TableColumn fx:id="clmKiraBasTar" prefWidth="138.0" text="Başlangıç Tarihi" />
+                                    <TableColumn fx:id="clmKiraBitTar" prefWidth="191.0" text="Bitiş Tarihi" />
+                                    <TableColumn fx:id="clmKiraFiyat" prefWidth="108.0" text="Fiyat" />
+                                    <TableColumn fx:id="clmnKiraUrun" prefWidth="139.0" text="Urun" />
+                                </columns>
+                              </TableView>
+                              <TextField fx:id="KiraAraText" layoutX="205.0" layoutY="14.0" />
+                              <Button fx:id="KiraAraButton" layoutX="405.0" layoutY="14.0" mnemonicParsing="false" onAction="#KiraArama" prefHeight="25.0" prefWidth="109.0" text="Ara" />
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children></Pane>
+   </children>
+</AnchorPane>

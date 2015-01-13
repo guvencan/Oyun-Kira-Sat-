@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24.Ara.2014 00:38:26 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.POJO.Satisgecmis" table="satisgecmis" catalog="yazilimproje" optimistic-lock="version">
+        <id name="satisGesmisId" type="java.lang.Integer">
+            <column name="SatisGesmisId" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="musteri" class="model.POJO.Musteri" fetch="select">
+            <column name="MusteriId" not-null="true" />
+        </many-to-one>
+        <many-to-one name="urun" class="model.POJO.Urun" fetch="select">
+            <column name="UrunId" not-null="true" />
+        </many-to-one>
+        <property name="durum" type="string">
+            <column name="Durum" length="45" not-null="true" />
+        </property>
+        <property name="satisKiraTarih" type="date">
+            <column name="SatisKiraTarih" length="10" not-null="true" />
+        </property>
+        <property name="satisFiyat" type="int">
+            <column name="SatisFiyat" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

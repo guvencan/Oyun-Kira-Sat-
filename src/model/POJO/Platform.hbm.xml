@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 02.Oca.2015 16:58:18 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.POJO.Platform" table="platform" catalog="yazilimproje" optimistic-lock="version">
+        <id name="platformId" type="java.lang.Integer">
+            <column name="PlatformId" />
+            <generator class="identity" />
+        </id>
+        <property name="platformAdi" type="string">
+            <column name="PlatformAdi" length="45" not-null="true" />
+        </property>
+        <set name="uruns" table="urun" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="PlatformId" not-null="true" />
+            </key>
+            <one-to-many class="model.POJO.Urun" />
+        </set>
+    </class>
+</hibernate-mapping>

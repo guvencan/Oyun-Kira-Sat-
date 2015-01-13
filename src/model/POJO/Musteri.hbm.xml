@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 02.Oca.2015 16:58:18 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.POJO.Musteri" table="musteri" catalog="yazilimproje" optimistic-lock="version">
+        <id name="musteriId" type="java.lang.Integer">
+            <column name="MusteriId" />
+            <generator class="identity" />
+        </id>
+        <property name="musteriTc" type="long">
+            <column name="MusteriTC" not-null="true" />
+        </property>
+        <property name="musteriAd" type="string">
+            <column name="MusteriAd" length="45" not-null="true" />
+        </property>
+        <property name="musteriSoyad" type="string">
+            <column name="MusteriSoyad" length="45" not-null="true" />
+        </property>
+        <property name="musteriMail" type="string">
+            <column name="MusteriMail" length="45" not-null="true" />
+        </property>
+        <property name="musteriTel" type="long">
+            <column name="MusteriTel" not-null="true" />
+        </property>
+        <property name="musteriAdres" type="string">
+            <column name="MusteriAdres" length="45" not-null="true" />
+        </property>
+        <property name="musteriTarih" type="date">
+            <column name="MusteriTarih" length="10" not-null="true" />
+        </property>
+        <property name="musteriPuan" type="java.lang.Integer">
+            <column name="MusteriPuan" />
+        </property>
+        <set name="kiraharekets" table="kirahareket" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="MusteriID" not-null="true" />
+            </key>
+            <one-to-many class="model.POJO.Kirahareket" />
+        </set>
+        <set name="satisgecmises" table="satisgecmis" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="MusteriId" not-null="true" />
+            </key>
+            <one-to-many class="model.POJO.Satisgecmis" />
+        </set>
+    </class>
+</hibernate-mapping>

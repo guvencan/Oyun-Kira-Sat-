@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 02.Oca.2015 16:58:18 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.POJO.User" table="user" catalog="yazilimproje" optimistic-lock="version">
+        <id name="userId" type="java.lang.Integer">
+            <column name="UserId" />
+            <generator class="identity" />
+        </id>
+        <property name="userName" type="string">
+            <column name="UserName" length="45" not-null="true" />
+        </property>
+        <property name="userPassword" type="string">
+            <column name="UserPassword" length="45" not-null="true" />
+        </property>
+        <property name="userMail" type="string">
+            <column name="UserMail" length="45" not-null="true" />
+        </property>
+        <set name="desteks" table="destek" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="UserId" not-null="true" />
+            </key>
+            <one-to-many class="model.POJO.Destek" />
+        </set>
+    </class>
+</hibernate-mapping>

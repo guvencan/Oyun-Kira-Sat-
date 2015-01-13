@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24.Ara.2014 00:38:26 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.POJO.Kirahareket" table="kirahareket" catalog="yazilimproje" optimistic-lock="version">
+        <id name="kiraHareketId" type="java.lang.Integer">
+            <column name="KiraHareketId" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="musteri" class="model.POJO.Musteri" fetch="select">
+            <column name="MusteriID" not-null="true" />
+        </many-to-one>
+        <many-to-one name="urun" class="model.POJO.Urun" fetch="select">
+            <column name="UrunID" not-null="true" />
+        </many-to-one>
+        <property name="kiraBaslangicTarih" type="date">
+            <column name="KiraBaslangicTarih" length="10" not-null="true" />
+        </property>
+        <property name="kiraSonTarih" type="date">
+            <column name="KiraSonTarih" length="10" not-null="true" />
+        </property>
+        <property name="kiraFiyat" type="int">
+            <column name="KiraFiyat" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

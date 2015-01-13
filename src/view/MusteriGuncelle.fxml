@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="375.0" prefWidth="644.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controller.MusteriGuncelleController">
+   <children>
+      <Label focusTraversable="false" layoutX="60.0" layoutY="51.0" text="Id :">
+         <font>
+            <Font name="Verdana Bold" size="11.0" />
+         </font>
+      </Label>
+      <Label focusTraversable="false" layoutX="60.0" layoutY="101.0" text="Tc No :">
+         <font>
+            <Font name="Verdana Bold" size="11.0" />
+         </font>
+      </Label>
+      <Label focusTraversable="false" layoutX="60.0" layoutY="151.0" text="Ad :">
+         <font>
+            <Font name="Verdana Bold" size="11.0" />
+         </font>
+      </Label>
+      <Label focusTraversable="false" layoutX="60.0" layoutY="201.0" text="Soyad :">
+         <font>
+            <Font name="Verdana Bold" size="11.0" />
+         </font>
+      </Label>
+      <Label focusTraversable="false" layoutX="336.0" layoutY="51.0" text="Mail :">
+         <font>
+            <Font name="Verdana Bold" size="11.0" />
+         </font>
+      </Label>
+      <Label focusTraversable="false" layoutX="336.0" layoutY="101.0" text="Telefon :">
+         <font>
+            <Font name="Verdana Bold" size="11.0" />
+         </font>
+      </Label>
+      <Label focusTraversable="false" layoutX="336.0" layoutY="151.0" text="Tarih :">
+         <font>
+            <Font name="Verdana Bold" size="11.0" />
+         </font>
+      </Label>
+      <Label focusTraversable="false" layoutX="60.0" layoutY="249.0" prefHeight="17.0" prefWidth="44.0" text="Puan :">
+         <font>
+            <Font name="Verdana Bold" size="11.0" />
+         </font>
+      </Label>
+      <TextField fx:id="lblId" focusTraversable="false" layoutX="151.0" layoutY="47.0" prefHeight="25.0" prefWidth="109.0" />
+      <TextField fx:id="lblTC" focusTraversable="false" layoutX="151.0" layoutY="97.0" prefHeight="25.0" prefWidth="109.0" />
+      <TextField fx:id="lblAd" focusTraversable="false" layoutX="151.0" layoutY="147.0" prefHeight="25.0" prefWidth="109.0" />
+      <TextField fx:id="lblSoyad" focusTraversable="false" layoutX="151.0" layoutY="197.0" prefHeight="25.0" prefWidth="109.0" />
+      <TextField fx:id="lblMail" focusTraversable="false" layoutX="427.0" layoutY="47.0" />
+      <TextField fx:id="lblTel" focusTraversable="false" layoutX="427.0" layoutY="97.0" />
+      <TextField fx:id="lblTarih" focusTraversable="false" layoutX="427.0" layoutY="147.0" />
+      <TextField fx:id="lblPuan" focusTraversable="false" layoutX="151.0" layoutY="245.0" prefHeight="25.0" prefWidth="109.0" />
+      <Button fx:id="btnMusteriGuncelle" focusTraversable="false" layoutX="268.0" layoutY="305.0" mnemonicParsing="false" onAction="#MusteriGuncelleme" prefHeight="25.0" prefWidth="109.0" style="-fx-background-color: #292323;" text="GÜNCELLE">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="0.007662835249042145" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="365.0" layoutY="305.0">
+         <image>
+            <Image url="@../pictures/20_User_64px_39.png" />
+         </image>
+      </ImageView>
+      <Label focusTraversable="false" layoutX="335.0" layoutY="201.0" text="Adres :">
+         <font>
+            <Font name="Verdana Bold" size="11.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="taAdres" focusTraversable="false" layoutX="427.0" layoutY="194.0" prefHeight="76.0" prefWidth="190.0" />
+   </children>
+</AnchorPane>

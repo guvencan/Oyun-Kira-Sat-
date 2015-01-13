@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 02.Oca.2015 16:58:18 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.POJO.Silinenmusteri" table="silinenmusteri" catalog="yazilimproje" optimistic-lock="version">
+        <id name="smusteriId" type="java.lang.Integer">
+            <column name="SMusteriId" />
+            <generator class="identity" />
+        </id>
+        <property name="smusteriTc" type="long">
+            <column name="SMusteriTC" not-null="true" />
+        </property>
+        <property name="smusteriAd" type="string">
+            <column name="SMusteriAd" length="45" not-null="true" />
+        </property>
+        <property name="smusteriSoyad" type="string">
+            <column name="SMusteriSoyad" length="45" not-null="true" />
+        </property>
+        <property name="smusteriMail" type="string">
+            <column name="SMusteriMail" length="45" not-null="true" />
+        </property>
+        <property name="smusteriTel" type="long">
+            <column name="SMusteriTel" not-null="true" />
+        </property>
+        <property name="smusteriAdres" type="string">
+            <column name="SMusteriAdres" length="45" not-null="true" />
+        </property>
+        <property name="smusteriTarih" type="date">
+            <column name="SMusteriTarih" length="10" not-null="true" />
+        </property>
+        <property name="smusteriPuan" type="int">
+            <column name="SMusteriPuan" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
